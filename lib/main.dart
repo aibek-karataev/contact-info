@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
+import 'package:line_icons/line_icons.dart';
 
 void main() {
   runApp(const MainApp());
@@ -41,7 +41,7 @@ class MainApp extends StatelessWidget {
                       radius: 80,
                     ),
                   ),
-                  SizedBox(height: 30.0),
+                  const SizedBox(height: 30.0),
                   const Center(
                     child: Text(
                       "Aibek Karataev",
@@ -81,29 +81,39 @@ class MainApp extends StatelessWidget {
                 children: <Widget>[
                   const SizedBox(height: 20.0),
                   Container(
-                    color: Colors.white,
-                    height: 50.0,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: <Widget>[
-                        Container(
-                          margin: const EdgeInsets.only(
-                            right: 15.0,
-                            left: 40.0,
-                          ),
-                          child: null,
+                      color: Colors.white,
+                      height: 50.0,
+                      child: InkWell(
+                        onTap: () async {
+                          // print("Button Clicked");
+                        },
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: <Widget>[
+                            Container(
+                              margin: const EdgeInsets.only(
+                                right: 15.0,
+                                left: 40.0,
+                              ),
+                              child: const Icon(
+                                LineIcons.phone,
+                                size: 25.0,
+                                color: darkGreen,
+                              ),
+                            ),
+                            const Center(
+                              child: Text(
+                                "+996 777 888 999",
+                                style: TextStyle(
+                                  fontFamily: "Roboto",
+                                  fontSize: 22.0,
+                                  color: darkGreen,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                        const Text(
-                          "+996 777 888 999",
-                          style: TextStyle(
-                            fontFamily: "Roboto",
-                            fontSize: 22.0,
-                            color: darkGreen,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                      )),
                   const SizedBox(height: 20.0),
                   Container(
                     color: Colors.white,
@@ -141,14 +151,4 @@ class MainApp extends StatelessWidget {
       ),
     );
   }
-}
-
-class CustomIcons {
-  CustomIcons._();
-
-  static const _kFontFam = 'CustomIcons';
-  static const String? _kFontPkg = null;
-
-  static const IconData pill =
-      IconData(0xea60, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }
