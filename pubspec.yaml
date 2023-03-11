@@ -19,10 +19,11 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/images/av.jpg
-    - assets/images/phone.png
-    # - assets/background.png
+    - assets/images/
   fonts:
     - family: Pacifico
       fonts:
         - asset: assets/fonts/Pacifico/Pacifico-Regular.ttf
+    - family: Sofia
+      fonts:
+        - asset: assets/fonts/Sofia-Regular.ttf
